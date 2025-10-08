@@ -1,5 +1,5 @@
 import express from "express";
-import { configDotenv } from "dotenv";
+import "dotenv/config";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
