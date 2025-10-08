@@ -19,6 +19,10 @@ app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"public","index.html"));
 })
 
+io.on("connection",(socket)=>{
+    console.log("A new user just joined");
+})
+
 app.listen(PORT,()=>{
     console.log(`App is listening at port ${PORT}`);
 })
