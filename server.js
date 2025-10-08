@@ -29,9 +29,9 @@ io.on("connection",(socket)=>{
 
     socket.on("disconnect",()=>{
         console.log("user disconnected");
-    })
-})
+    });
+});
 
-app.listen(PORT,()=>{
+httpServer.listen(PORT,()=>{
     console.log(`App is listening at port ${PORT}`);
-})
+});
