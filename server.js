@@ -2,9 +2,15 @@ import express from "express";
 import "dotenv/config";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+import { createServer } from "http";
+import { Server } from "socket.io";
+
 
 const PORT = process.env.PORT || 5000;
 const app = express();
+
+const httpServer = createServer(app);
+const io = new Server(httpServer);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
