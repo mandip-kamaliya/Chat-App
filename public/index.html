@@ -6,18 +6,26 @@
     <title>Chat App</title>
 </head>
 <body>
-    <div className="Chat-App">
+    <h1>Chat App</h1>
+    
+        <ul id="messages">
+            <!-- Messages will be dynamically added here -->
+        </ul>
+    
+    <form className="Chat-App">
         <input type="text" placeholder="write you message" id="input">
         <button type="submit" id="button"></button>
-    </div>
+    </form>
 
     <script>
         const socket = io();
 
+        const form = document.getElementById("Chat-App");
         const Input = document.getElementById("input");
-        const button = document.getElementById("button");
+        const messages = document.getElementById("messages");
+        
 
-        Input.addEventListener()
+        Input.addEventListener("submit")
     </script>
 </body>
 </html>
