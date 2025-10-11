@@ -12,7 +12,7 @@
             <!-- Messages will be dynamically added here -->
         </ul>
     
-    <form className="Chat-App">
+    <form className="Chat-App" action="" id="form">
         <input type="text" placeholder="write you message" id="input">
         <button type="submit" id="button">send</button>
     </form>
@@ -21,12 +21,12 @@
     <script>
         const socket = io();
 
-        const form = document.getElementById("Chat-App");
+        const form = document.getElementById("form");
         const Input = document.getElementById("input");
         const messages = document.getElementById("messages");
         
 
-        Input.addEventListener("submit",(e)=>{
+        form.addEventListener("submit",(e)=>{
             e.preventDefault();
             if(input.value){
                 socket.emit("chat message",messages);
