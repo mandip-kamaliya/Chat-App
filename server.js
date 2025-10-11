@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 })
 
 io.on("connection",(socket)=>{
-    console.log("A new user just joined");
+    console.log("A new user just joined",socket.id);
 
     socket.on("chat message",(msg)=>{
         console.log("message",msg);
