@@ -29,13 +29,10 @@
         form.addEventListener("submit",(e)=>{
             e.preventDefault();
             if(input.value){
-                socket.emit("chat message",messages);
+                socket.emit("chat message",input.value);
             }
             
-            const item = document.createElement("li");
-            item.textContent= `${messages}`;
-            messages.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
+           
             Input.value = '';
             });
 
